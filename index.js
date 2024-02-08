@@ -1,6 +1,3 @@
-const form = document.querySelector('form');
-const inputList = document.getElementsByTagName('input');
-
 //phone country code
 const phoneInputField = document.querySelector("#phone");
 const phoneInput = window.intlTelInput(phoneInputField, {
@@ -32,7 +29,7 @@ function sendMail() {
   phone: document.querySelector('#phone')?.value,
   courseType: document.querySelector('#course-type')?.value,
   dob: document.querySelector('#dob')?.value,
-  age: calculateAge(new Date(document.querySelector('#dob')?.value,)),
+  age: calculateAge(new Date(document.querySelector('#dob')?.value)),
   message: document.querySelector('#message')?.value,
   gdpr: document.querySelector('#gdpr')?.checked ? 'DA' : 'NU'
   }
@@ -46,11 +43,10 @@ function sendMail() {
     document.querySelector('#lastName').value = '';
     document.querySelector('#email').value = '';
     document.querySelector('#phone').value = null;
-    document.querySelector('#course-type').value  = null;
-    document.querySelector('#dob').value = null;
+    document.querySelector('#course-type').value  = undefined;
+    document.querySelector('#dob').value = undefined;
     document.querySelector('#message').value = '';
     document.querySelector('#gdpr').checked = false;
-    console.log(res);
   })
   .catch (error => console.log(error));
 }
@@ -60,7 +56,8 @@ function sendMail() {
 
 
 
-
+// const form = document.querySelector('.form');
+// const inputList = document.getElementsByTagName('input');
 
 // form.addEventListener('submit', event => {
 //   event.preventDefault();
