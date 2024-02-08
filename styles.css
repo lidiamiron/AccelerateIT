@@ -105,7 +105,7 @@ p{
   70% { box-shadow: 15px 15px 80px rgba(255, 0, 238, 0.4) }
   100% { box-shadow: 15px 15px 80px rgba(204, 0, 255, 0.2) }
 }
-form{
+.form{
   width: 400px;
   height: 600px;
   background: rgba(255, 255, 255, 0.8);
@@ -118,7 +118,7 @@ form{
   animation: formShadow 7s linear infinite;
 }
 
-form p{
+.form p{
   font-family: 'Thasadith', sans-serif;
   color:black;
   font-size: 1em;

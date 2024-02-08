@@ -33,30 +33,31 @@
       </div>
     </header>
     <main>
-      <form action="">
+      <div class="form">
         <p>Hai să ne cunoaștem!</p>
         <div class="form-data">
           <div class="fullname">
-            <fieldset class="firstname formelement-label-pair">
-              <label for="firstname">Prenume</label>
-              <input id="firstname" type="text" name ="firstname">
+            <fieldset class="firstName formelement-label-pair">
+              <label for="firstName">Prenume</label>
+              <input id="firstName" type="text" name ="firstName" required>
             </fieldset>
-            <fieldset class="lastname formelement-label-pair">
-              <label for="lastname">Nume</label>
-              <input id="lastname" type="text" name ="lastname">
+            <fieldset class="lastName formelement-label-pair">
+              <label for="lastName">Nume</label>
+              <input id="lastName" type="text" name ="lastName" required>
             </fieldset>
           </div>
           <div class="email formelement-label-pair">
             <label for="email">Email</label>
-            <input id="email" type="email" name="email">
+            <input id="email" type="email" name="email" required>
           </div>
           <div class="phone formelement-label-pair">
             <label for="phone">Nr. Telefon</label>
-            <input style="width:100%" id="phone" type="number" min="0" minlength="10"  name="phone">
+            <input style="width:100%" id="phone" type="number" min="0" minlength="10"  name="phone" required>
           </div>
           <div class="nickname formelement-label-pair">
             <label for="message">Lasă-ne un mesaj</label>
-            <select name="" id="course-type">
+            <select name="" id="course-type" required>
+              <option value="" disabled selected>Selecteaza o optiune</option>
               <option value="ECDL">ECDL</option>
               <option value="frontend/backend">Frontend/Backend</option>
             </select>
@@ -72,18 +73,14 @@
           <p id="form-error">*Toate câmpurile sunt necesare pentru a continua</p>
         </div>
         <div class="consent">
-          <input id="consent" type="checkbox">
+          <input id="gdpr" type="checkbox" required>
           <label id="consent-label" for="user_agree_to_terms">
             Sunt de-acord ca informațiile pe care le-am oferit să fie folosite doar în procesul de admitere și comunicare in conformitate cu GDPR
-            <!-- <a target="_blank" href="/terms">Terms of Service</a>,
-            <a target="_blank" href="/privacy">Privacy Policy</a>, and default
-            <a target="_blank" href="/notifications">Notification Settings</a>. -->
           </label>
           <p id="consent-error" style="color:red; font-size: 0.85em; text-align: center;display: none;">*Ne pare rău, dar nu putem trimite formularul fără consimțământul tău pentru GDPR</p>
         </div>
-  
-        <button onclick="test()">Trimite</button>
-      </form>
+        <button onclick="sendMail()">Trimite</button>
+      </div>
     </main>
     <footer>
       <section class="copyright">
@@ -96,5 +93,10 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("2AqA444fRgyiaZXV_");
+      })();
+    </script>
 </body>
 </html>
