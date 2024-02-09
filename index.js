@@ -17,10 +17,14 @@ function calculateAge(dob) {
 
   return Math.abs(age_dt.getUTCFullYear() - 1970);
 }
-
+//handle form
+let form = document.querySelector('.form')
+form.addEventListener('submit', sendMail);
 
 // EmailJS service
-function sendMail() {
+function sendMail(event) {
+  event.preventDefault();
+  console.log(event, 'event')
   const params = {
   firstName: document.querySelector('#firstName')?.value,
   lastName: document.querySelector('#lastName')?.value,
@@ -33,7 +37,7 @@ function sendMail() {
   message: document.querySelector('#message')?.value,
   gdpr: document.querySelector('#gdpr')?.checked ? 'DA' : 'NU'
   }
-
+  console.log(params);
   const serviceId = 'service_uu7ki1n';
   const templateId = 'template_se5geg2';
 
@@ -50,10 +54,6 @@ function sendMail() {
   })
   .catch (error => console.log(error));
 }
-
-
-
-
 
 
 // const form = document.querySelector('.form');

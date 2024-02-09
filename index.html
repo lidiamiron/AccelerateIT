@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accelerate IT</title>
+    <link rel="icon" href="./resources/Icon-negru.png" id="light-scheme-icon">
     <link rel="stylesheet" href="styles.css" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,24 +40,26 @@
               access oportunităților din IT
             </p>
           </div>
-          <div class="form">
+          <form class="form">
             <p>HAI SĂ NE CUNOAȘTEM!</p>
             <div class="form-data">
               <div class="input-pair">
                 <input
-                  id="firstname"
+                  id="firstName"
                   type="text"
                   name="firstname"
                   placeholder="Prenume"
+                  required
                 />
                 <input
-                  id="lastname"
+                  id="lastName"
                   type="text"
                   name="lastname"
                   placeholder="Nume"
+                  required
                 />
               </div>
-              <input id="email" type="email" name="email" placeholder="Email" />
+              <input id="email" type="email" name="email" placeholder="Email" required/>
               <div class="input-pair">
                 <input
                   id="phone"
@@ -65,20 +68,22 @@
                   minlength="10"
                   name="phone"
                   placeholder="Nr.Telefon"
+                  required
                 />
                 <input
                   id="dob"
                   type="date"
                   name="dob"
-                  placeholder="Data Nașterii "
+                  placeholder="Data Nașterii"
+                  required
                 />
               </div>
-              <select name="course" id="course-type">
+              <select name="course" id="course-type" required>
                 <option value="" disabled selected hidden>
                   Alege cursul dorit
                 </option>
                 <option value="ECDL">ECDL</option>
-                <option value="frontend/backend">Frontend/Backend</option>
+                <option value="frontend\/backend">Frontend/Backend</option>
               </select>
               <textarea
                 style="resize: none"
@@ -89,15 +94,14 @@
               ></textarea>
             </div>
             <div class="consent">
-              <input type="checkbox"/>
+              <input id="gdpr" type="checkbox" required/>
               <p id="consent-label" for="user_agree_to_terms">
                 Sunt de-acord ca informațiile pe care le-am oferit să fie folosite
                 doar în procesul de admitere și comunicare in conformitate cu GDPR
                 </p>
             </div>
-  
-            <button onclick="test()">TRIMITE</button>
-          </div>
+            <button>TRIMITE</button>
+          </form>
         </div>
       </header>
       <main>
