@@ -13,7 +13,7 @@ header {
   width: 100%;
 }
 .background{
-  position: absolute;
+  position: fixed;
   top:0;
   left: 0;
   width:100vw;
@@ -23,7 +23,7 @@ header {
   overflow: hidden;
 }
 .background-light{
-  position: absolute;
+  position: fixed;
   top: -300px;
   right:-2000px;
   width:4000px;
@@ -49,6 +49,7 @@ header {
 }
 .container {
   position: relative;
+  margin-top:100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -307,6 +308,7 @@ footer {
   }
   .container{
     width:100%;
+    margin-top: 0px;
     flex-direction: column;
     align-items: center;
   }
