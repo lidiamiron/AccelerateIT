@@ -12,8 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400&family=Oswald:wght@300;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- phone country code library -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
@@ -22,63 +21,58 @@
   </head>
 
   <body>
-    <!--<div class="breath">
-    <span class="material-symbols-outlined">brightness_1</span>
-  </div>-->
-    <div class="logo">
-      <img src="./resources/Logo Alb.png" alt="logo AccelerateIT" width="300" />
+    <div class="background">
+      <div class="background-light"></div>
     </div>
     <div class="wrapper">
       <header>
+        <div class="logo">
+          <img src="./resources/Logo Alb.png" alt="logo AccelerateIT" width="200" />
+        </div>
         <div class="container">
           <div class="heading">
-            <h1>CREDEM CĂ ROMÂNII</h1>
-            <h1 id="secondRow">
-              <span id="light">au ceva</span> SPECIAL
-              <span id="light">pentru</span> IT!
+            <h1>CREDEM CĂ ROMÂNII <span id="light"><br>
+              au ceva</span> SPECIAL <span id="light">pentru</span> IT!
             </h1>
             <p>
               Împreună, accelerăm dezvoltarea ta profesională pentru a-ți oferi
               access oportunităților din IT
             </p>
           </div>
-        </div>
-        <div class="form">
-          <p id="titulo">HAI SĂ NE CUNOAȘTEM!</p>
-          <div class="form-data">
-            <div class="fullname">
-              <fieldset class="firstname formelement-label-pair">
+          <div class="form">
+            <p>HAI SĂ NE CUNOAȘTEM!</p>
+            <div class="form-data">
+              <div class="input-pair">
                 <input
                   id="firstname"
                   type="text"
                   name="firstname"
                   placeholder="Prenume"
                 />
-              </fieldset>
-              <fieldset class="lastname formelement-label-pair">
                 <input
                   id="lastname"
                   type="text"
                   name="lastname"
                   placeholder="Nume"
                 />
-              </fieldset>
-            </div>
-            <div class="email formelement-label-pair">
+              </div>
               <input id="email" type="email" name="email" placeholder="Email" />
-            </div>
-            <div class="phone formelement-label-pair">
-              <input
-                style="width: 100%"
-                id="phone"
-                type="number"
-                min="0"
-                minlength="10"
-                name="phone"
-                placeholder="Nr.Telefon"
-              />
-            </div>
-            <div class="course-type formelement-label-pair">
+              <div class="input-pair">
+                <input
+                  id="phone"
+                  type="number"
+                  min="0"
+                  minlength="10"
+                  name="phone"
+                  placeholder="Nr.Telefon"
+                />
+                <input
+                  id="dob"
+                  type="date"
+                  name="dob"
+                  placeholder="Data Nașterii "
+                />
+              </div>
               <select name="course" id="course-type">
                 <option value="" disabled selected hidden>
                   Alege cursul dorit
@@ -86,59 +80,34 @@
                 <option value="ECDL">ECDL</option>
                 <option value="frontend/backend">Frontend/Backend</option>
               </select>
-            </div>
-            <div class="dob formelement-label-pair">
-              <input
-                id="dob"
-                type="date"
-                name="dob"
-                placeholder="Data Nașterii "
-              />
-            </div>
-            <div class="message formelement-label-pair">
               <textarea
                 style="resize: none"
                 id="message"
                 name="message"
-                rows="5"
+                rows="3"
                 placeholder="Lasă-ne un mesaj"
               ></textarea>
             </div>
-            <p id="form-error">
-              *Toate câmpurile sunt necesare pentru a continua
-            </p>
+            <div class="consent">
+              <input type="checkbox"/>
+              <p id="consent-label" for="user_agree_to_terms">
+                Sunt de-acord ca informațiile pe care le-am oferit să fie folosite
+                doar în procesul de admitere și comunicare in conformitate cu GDPR
+                </p>
+            </div>
+  
+            <button onclick="test()">TRIMITE</button>
           </div>
-          <div class="consent">
-            <input id="consent" type="checkbox" />
-            <label id="consent-label" for="user_agree_to_terms">
-              Sunt de-acord ca informațiile pe care le-am oferit să fie folosite
-              doar în procesul de admitere și comunicare in conformitate cu GDPR
-              <!-- <a target="_blank" href="/terms">Terms of Service</a>,
-            <a target="_blank" href="/privacy">Privacy Policy</a>, and default
-            <a target="_blank" href="/notifications">Notification Settings</a>. -->
-            </label>
-            <p
-              id="consent-error"
-              style="
-                color: red;
-                font-size: 0.85em;
-                text-align: center;
-                display: none;
-              "
-            >
-              *Ne pare rău, dar nu putem trimite formularul fără consimțământul
-              tău pentru GDPR
-            </p>
-          </div>
-
-          <button onclick="test()">TRIMITE</button>
         </div>
       </header>
-
+      <main>
+        <div class="motif">
+          <img src="./resources/Recurso 2.svg" alt="" width="600">
+          <img src="./resources/Recurso 1.svg" alt="" width="600">
+        </div>
+      </main>
       <footer>
-        <section class="copyright">
-          <p><span id="copyright-year"></span> © Carpatheq Works</p>
-        </section>
+        <p class="copyright">Copyright © AccelerateIT <span id="copyright-year"></span></p>
       </footer>
     </div>
     <script src="index.js"></script>
