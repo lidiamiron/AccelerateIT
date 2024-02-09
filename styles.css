@@ -12,21 +12,6 @@ header {
   align-items: center;
   width: 100%;
 }
-
-@media screen and (max-width: 375px) {
-}
-@media screen and (max-width: 576px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 992px) {
-}
-@media screen and (max-width: 1200px) {
-}
-@media screen and (max-width: 1400px) {
-}
-@media screen and (max-width: 2200px) {
-}
 .background{
   position: absolute;
   top:0;
@@ -38,7 +23,7 @@ header {
   overflow: hidden;
 }
 .background-light{
-  position: fixed;
+  position: absolute;
   top: -300px;
   right:-2000px;
   width:4000px;
@@ -122,7 +107,7 @@ header {
   font-family: "Catamaran", sans-serif;
   padding: 5px;
   border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.793);
   color: #6f6e6e;
   border: none;
 }
@@ -254,13 +239,20 @@ main .motif {
   display: flex;
   flex-direction: column;
 }
+main .motif img {
+  width: 600px;
+}
 main .motif img:first-child{
   margin-bottom: -50px;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;padding: 5px;
+  display: flex;
+  align-items: flex-end;
+  flex:1;
+  position: static;
+  bottom: 0;
+  padding: 5px;
 }
 .copyright {
   text-align: center;
@@ -269,3 +261,73 @@ footer {
   font-size: 0.8em;
   font-weight: 200;
 }
+
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 576px) {
+  .background-light{
+    right:-2500px;
+  }
+  .heading h1{
+    font-size: 2.5em;
+    padding: 0 20px;
+    text-align: start;
+    box-sizing: border-box;
+  }
+  .heading p{
+    font-size: 1.5em;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .form{
+    box-sizing: border-box;
+    margin: 20px;
+    max-width:80%;
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 1200px) {
+  .background{
+    position: fixed;
+  }
+  .background-light{
+    position: fixed;
+    right:-2400px;
+    overflow: hidden;
+  }
+  .wrapper{
+    width:90vw;
+    box-sizing: border-box;
+  }
+  .logo{
+    align-self: center;
+  }
+  .container{
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heading{
+    max-width: 380;
+    margin-top: 50px;
+  }
+  .form {
+    margin-top: 70px;
+    max-width: 380px;
+    z-index: 1;
+    margin-bottom: 30px;
+  }
+  main{
+    align-self: center;
+    position: fixed;
+  }
+}
+@media screen and (max-width: 1400px) {
+}
+@media screen and (max-width: 2200px) {
+  
+}
+
