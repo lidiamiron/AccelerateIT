@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const inputList = document.getElementsByTagName('input');
 
+
 //phone country code
 const phoneInputField = document.querySelector("#phone");
 const phoneInput = window.intlTelInput(phoneInputField, {
