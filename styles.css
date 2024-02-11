@@ -55,7 +55,7 @@ header {
   align-items: center;
 }
 .heading{
-  margin-top: 100px;
+  margin-top: -45px;
 }
 .heading h1 {
   color: #826fa9;
@@ -269,7 +269,7 @@ main .motif img {
   z-index: -1;
 }
 main .motif img:first-child{
-  margin-bottom: -50px;
+  margin-bottom: -70px;
 }
 
 footer {
