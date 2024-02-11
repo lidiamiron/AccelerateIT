@@ -7,6 +7,17 @@ const phoneInput = window.intlTelInput(phoneInputField, {
   "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
   });
 
+function handleDateInput(event, value){
+  console.log(value);
+  if(event.type === "focus") {
+    document.querySelector('.dob-text').style.display = 'none';
+    document.querySelector('.dob-date').style.display = 'block';
+    document.querySelector('.dob-date').focus();
+  } else if (event.type === "blur" && !value) {
+    document.querySelector('.dob-text').style.display = 'block';
+    document.querySelector('.dob-date').style.display = 'none';
+  }
+}
 //copy-right year auto-update
 const currentYear =  new Date().getFullYear();
 document.querySelector('#copyright-year').innerHTML = currentYear;

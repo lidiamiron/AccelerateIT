@@ -72,13 +72,22 @@
                 />
                 <input
                   id="dob"
+                  class="dob-text"
                   type="text"
                   name="dob"
                   placeholder="Data Nașterii"
                   required
-                  onfocus="(this.type='date')"
-                  onblur="(this.type='text')"
+                  onfocus="handleDateInput(event)"
                 />
+                <input
+                id="dob"
+                class="dob-date"
+                type="date"
+                name="dob"
+                placeholder="Data Nașterii"
+                required
+                onblur="handleDateInput(event, this.value)"
+              />
               </div>
               <select name="course" id="course-type" required>
                 <option value="" disabled selected hidden>
