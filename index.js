@@ -67,6 +67,12 @@ function sendMail(event) {
 }
 
 
+//reCaptcha v3
+function onSubmit(token) {
+  document.querySelector(".form").submit();
+}
+
+
 // const form = document.querySelector('.form');
 // const inputList = document.getElementsByTagName('input');
 

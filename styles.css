@@ -7,10 +7,12 @@ body {
 }
 header {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 200px;
 }
 .background{
   position: fixed;
@@ -290,6 +292,11 @@ footer {
 
 @media screen and (max-width: 375px) {
 }
+@media screen and (max-width: 480px) {
+  .form{
+    padding: 30px 20px;
+  }
+}
 @media screen and (max-width: 576px) {
   .background-light{
     right:-2500px;
@@ -303,6 +310,9 @@ footer {
   .heading p{
     font-size: 1.5em;
     padding: 0 20px;
+  }
+  .form > p {
+    font-size: 1.7em;
   }
 }
 @media screen and (max-width: 768px) {
@@ -325,6 +335,9 @@ footer {
   .logo{
     align-self: center;
   }
+  header{
+    margin-bottom: 0;
+  }
   .container{
     width:100%;
     margin-top: 0px;
@@ -345,8 +358,14 @@ footer {
     align-self: center;
     position: fixed;
   }
+  footer{
+    position: static;
+  }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
+  .background-light{
+    right: -2400px;
+  }
 }
 @media screen and (max-width: 2200px) {
   
